@@ -15,15 +15,23 @@
 
         footer {
             font-size: 22px;
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+        }
+        
+        footer p {
+            margin: 0 auto;
+            
         }
 
-        .video {
+        video {
             aspect-ratio: 16 / 9;
             width: 60%;
         }
 
         @media screen and (max-width: 1024px) {
-            .video {
+            video {
                 aspect-ratio: 16 / 9;
                 width: 80%;
             }
@@ -33,8 +41,8 @@
             }
         }
 
-        @media screen and (max-width: 480px) {
-            .video {
+        @media screen and (max-width: 620px) {
+            video {
                 aspect-ratio: 16 / 9;
                 width: 100%;
             }
@@ -43,15 +51,32 @@
                 font-size: 30px;
             }
         }
+
+        /* a {
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 50px;
+            color: black;
+            padding: 10px;
+        } */
     </style>
 </head>
 
 <body>
 
-    <iframe class="video" src="https://www.youtubetrimmer.com/view/?v=-eXTrNaC7EU&start=609&end=679&loop=0"
-        frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    <footer>Jesus Cristo é o mesmo, ontem, hoje e para sempre.</footer>
+    <video src="acredite_em_mim.webm" controls autoplay>
+        <source src="acredite_em_mim.webm" type="video/webm">
+        Desculpa, o seu navegador não suporta vídeos incorporados,
+        mas você pode <a href="acredite_em_mim.webm">baixá-lo</a>
+        e assistir pelo seu reprodutor de mídia favorito!
+    </video>
+    <!-- <a href="acredite_em_mim.webm">download</a> -->
+    <footer>
+        <p>
+          Jesus Cristo é o mesmo, ontem, hoje e para sempre.
+        </p>
+    </footer>
+
 </body>
 
 </html>
