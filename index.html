@@ -19,10 +19,10 @@
             bottom: 20px;
             width: 100%;
         }
-        
+
         footer p {
             margin: 0 auto;
-            
+
         }
 
         video {
@@ -52,30 +52,48 @@
             }
         }
 
-        /* a {
+        a {
             text-decoration: none;
             border: 1px solid black;
             border-radius: 50px;
             color: black;
-            padding: 10px;
-        } */
+            padding: 10px 30px;
+            margin-top: 12px;
+            display: inline-block;
+        }
+
+        a:active {
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+    <section>
+        <video id="video" src="acredite_em_mim.webm" controls autoplay>
+            <source src="acredite_em_mim.webm" type="video/webm">
+            Desculpa, o seu navegador não suporta vídeos incorporados,
+            mas você pode <a href="acredite_em_mim.webm">baixá-lo</a>
+            e assistir pelo seu reprodutor de mídia favorito!
+        </video>
+        <div>
+            <a id="play">Play</a>
 
-    <video src="acredite_em_mim.webm" controls autoplay>
-        <source src="acredite_em_mim.webm" type="video/webm">
-        Desculpa, o seu navegador não suporta vídeos incorporados,
-        mas você pode <a href="acredite_em_mim.webm">baixá-lo</a>
-        e assistir pelo seu reprodutor de mídia favorito!
-    </video>
-    <!-- <a href="acredite_em_mim.webm">download</a> -->
+        </div>
+
+    </section>
     <footer>
         <p>
-          Jesus Cristo é o mesmo, ontem, hoje e para sempre.
+            Jesus Cristo é o mesmo, ontem, hoje e para sempre.
         </p>
     </footer>
+    <script>
+        document.getElementById('play').addEventListener("click", async () => {
+            const video = document.getElementById('video');
+            await video.play();
+        })
+    </script>
 
 </body>
 
